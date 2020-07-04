@@ -3,7 +3,7 @@ let total = 0;
 
 do {
   input = prompt("Введите число");
-  const notANumber = isNaN(input);
+  const notANumber = Number.isNaN(input);
   if (notANumber) {
     alert("Было введено не число, попробуйте ещё раз");
     continue;

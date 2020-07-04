@@ -1,38 +1,28 @@
-const country = prompt('Введите страну');
-let fixedCountry ="";
+const country = prompt("Введите страну");
+const china = 100;
+const chile = 250;
+const australia = 170;
+const india = 80;
+const jamaica = 120;
 
-for(let i=0; i<country.length; i+=1){
-
-if (i===0){
-	fixedCountry += country.charAt(i).toUpperCase();
-	continue;
-}
-else {
-	fixedCountry += country.charAt(i).toLowerCase();	
-	}
-}
-
-let cost;
-
-switch (fixedCountry) {
-	case 'Китай': 
-	cost = 100;
-	break;
-	case 'Чили': 
-	cost = 250;
-	break;
-	case 'Австралия': 
-	cost = 170;
-	break;
-	case 'Индия': 
-	cost = 80;
-	break;
-	case 'Ямайка': 
-	cost = 120;
-	break;
-	default: alert('В вашей стране доставка недоступна');
-}
-
-if(cost !== undefined){
-console.log(`Доставка в ${fixedCountry} будет стоить ${cost} кредитов`);
+if (country !== null) {
+  switch (country.toLowerCase()) {
+    case "китай":
+      console.log(`Доставка в ${country} будет стоить ${china} кредитов`);
+      break;
+    case "чили":
+      console.log(`Доставка в ${country} будет стоить ${chile} кредитов`);
+      break;
+    case "австралия":
+      console.log(`Доставка в ${country} будет стоить ${australia} кредитов`);
+      break;
+    case "индия":
+      console.log(`Доставка в ${country} будет стоить ${india} кредитов`);
+      break;
+    case "ямайка":
+      console.log(`Доставка в ${country} будет стоить ${jamaica} кредитов`);
+      break;
+    default:
+      alert("В вашей стране доставка недоступна");
+  }
 }
